@@ -1,0 +1,19 @@
+A test code to understand working of ADXL335 is as follows:
+
+void setup()
+{
+ pinMode(A0,INPUT);     //x-axis is connected to A0
+ pinMode(A1,INPUT);     //y-axis is connected to A1
+ pinMode(A2,INPUT);     //z-axis is connected to A2
+Serial.begin(9600);       //To print data to Serial Monitor
+}
+void loop()
+{
+ Serial.print(" X= ");
+ Serial.println(analogRead(A0));
+ Serial.print(" Y= ");
+ Serial.println(analogRead(A1));
+ Serial.print(" Z= ");
+ Serial.println(analogRead(A2));
+ delay(1000);
+
